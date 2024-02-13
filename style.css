@@ -1,0 +1,217 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Inter', sans-serif;
+}
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 24
+}
+body{
+    background: #d4eefd;
+}
+.chatbot-toggler{
+    position: fixed;
+    right: 48px;
+    bottom: 35px;
+    height: 50px;
+    width: 50px;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    border-radius: 50%;
+    transition: all 0.3s ease;
+  }
+  .chatbot-toggler span{
+     position: absolute; 
+  }
+.open{
+    width: 72px;
+    height: 72px;
+}
+.chatbot{
+    position: fixed;
+    right: 40px;
+    width: 380px;
+    height: 90%;
+    bottom: 20px;
+    transform: scale(0.5);
+    background:#eaedf2;
+    border-radius: 15px;
+    transform: scale(0.5);
+    opacity: 0;
+    pointer-events: none;
+    overflow: hidden;
+    transform-origin: bottom right;
+    transition: all 0.3s ease;
+}
+.show-chatbot .chatbot{
+    transform: scale(1);
+    opacity:1;
+    pointer-events: auto;
+}
+.chatbot header{
+    background:white;
+    padding: 12px 20px 0px;
+    position: relative;
+    display: flex;
+}
+.chatbot header  h2{
+    font-size: 1.7rem;
+    font-weight: 500;
+    line-height: 100%;
+    vertical-align: bottom;
+    margin-top: 3%;
+}
+.chatbot header  h2 p{
+    font-size: 0.9rem;
+    font-weight: 400;
+    text-align: left;
+    color: #ccc;
+    font-family: 'Inter', sans-serif;
+}
+.chatbot header span{
+    position: absolute;
+    right: 20px;
+    top: 36%;
+    color: dimgrey;
+    cursor: pointer;
+    transform: translateY(-50%);
+    vertical-align: top;
+}
+.chatbot header div{
+    color: white;
+    align-self: flex-start;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 32px;
+    border-radius:50%;
+    margin: 0px 10px 7px 0; 
+    vertical-align: top;
+}
+.chatbot header div img{
+    height: 84px;
+    width: 84px;
+}
+
+.chatbot .chatbox {
+    height: 510px;
+    overflow-y: auto;
+    padding: 16px 20px 100px;
+}
+.chatbox .chat{
+    list-style-type:none ;
+}
+.chatbox li{
+    list-style-type:none ;
+    margin-top: 10px;
+}
+.chatbox .incoming div span{
+    height: 24px;
+    width: 24px;
+    color: white;
+    text-align: center;
+    justify-content: top;
+    line-height: 18px;
+    border-radius: 50%;
+    margin: 0px 6px 7px 0; 
+    vertical-align: top;
+}
+.chatbox .incoming div span img{
+    height: 24px;
+    width: 24px;
+}
+.chatbox .incoming div div{
+    color: #171717;
+    font-size: 13px;
+}
+.chatbox .incoming div{
+    display: flex;
+}
+.chatbox .outgoing {
+    display: flex;
+    justify-content: flex-end;
+}
+.chatbox .outgoing p{
+    background: #0067ff;
+    justify-content: flex-end;
+    word-wrap: break-word;
+    white-space: pre-wrap;
+    word-break: break-word;
+    text-align: left;
+
+}
+.chatbox .outgoing p span{
+    background: white;
+    justify-content: flex-end;
+}
+.chatbox .chat p{
+    color: white;
+    width: fit-content;
+    max-width: 100%;
+    font-size: 14px;
+    padding: 12px 16px;
+    background: #0067ff;
+    border-radius: 20px 20px 0px 20px;
+}
+.chatbox .incoming p{
+    color: #000;
+    background:white;
+    border-radius: 20px 20px 20px 0px;
+}
+
+.you{
+    font-size: 12px; 
+    color:#171717 ;
+    text-align: right;
+    padding-bottom: 2px;
+    line-height: 28px;
+}
+
+.chatbot .chat-input{
+    position: absolute;
+    bottom: 0%;
+    width: 100%;
+    display: flex;
+    padding: 5px 12px;
+    background-color: white; 
+}
+.chat-input textarea{
+  height: 40px;
+  border: none; 
+  outline: none;
+  max-height: 180px;
+  font-size: 14px;
+  resize: none;
+  padding: 8px 15px 8px 0px;
+  width: 92%;
+}
+.chat-input span{
+    color:gray;
+    height: 40px;
+    line-height: 40px;
+    font-size: 1.35rem;
+    cursor: pointer;  
+}
+@media(max-width: 490px){
+    .chatbot{
+        right: 10px;
+        width: 300px;
+    }
+    .chatbot .chatbox{
+        height: 90%;
+        padding: 16px 20px 200px;
+
+    }
+}
