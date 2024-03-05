@@ -55,11 +55,11 @@ const handleChat = () => {
 
     setTimeout (() => {
         //Display "..." mesage while waiting for the response
-        const incomingChatLi = createChatLi("...", "incoming")
+        const incomingChatLi = createChatLi("<i class='fa fa-spinner fa-spin'></i>", "incoming")
           chatbox.appendChild(incomingChatLi);
           chatbox.scrollTo(0, chatbox.scrollHeight);
           generateResponse(incomingChatLi);
-          
+
     }, 600);
 }
 
